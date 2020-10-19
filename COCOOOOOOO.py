@@ -40,7 +40,7 @@ coco.modelSense = GRB.MAXIMIZE
 X = coco.addVars(combustible, 20, lb=0, vtype=GRB.CONTINUOUS)
 stock=coco.addVar(lb=0,vtype=GRB.BINARY)
 
-    
+    fgfffffdgsdfgfdgsd 
 
 for i in range(20):
     
