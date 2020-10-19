@@ -51,7 +51,7 @@ for i in range(20):
                    + quicksum(pcis[c]*Y[c,i] for c in combustibles)== prod)
     coco.addConstr((1-ratiocmin)*X['c',i] - ratiocmin*X['g',i] >= 0)
     coco.addConstr(X['g',i] - gdispo <= 0)
-    coco.addConstr(sum(Y[c,i] for c in combustibles) <= stock*1500*365+1500*365 )
+    coco.addConstr(sum(Y[c,i] for c in combustibles) <= 1500*365*(1+stock)
     
 
 coco.setObjective(quicksum(profit(c)*X[c,i] for c in combustible for i in range(20))+quicksum(profits(c)*Y[c,i] for c in combustibles for i in range(20)) - stock*invs - coutfixeg,
